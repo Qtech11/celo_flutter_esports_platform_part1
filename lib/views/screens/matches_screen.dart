@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_celo_esports_platform/provider.dart';
 import 'package:flutter_celo_esports_platform/views/screens/create_match_screen.dart';
 import 'package:flutter_celo_esports_platform/views/screens/match_details_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
 import '../../match_model.dart';
+import '../../web3_provider.dart';
 
 class MatchesScreen extends ConsumerStatefulWidget {
   const MatchesScreen({Key? key}) : super(key: key);

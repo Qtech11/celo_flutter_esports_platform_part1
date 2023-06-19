@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_celo_esports_platform/provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
+import '../../web3_provider.dart';
 import '../widgets/custom_text_field.dart';
 
 class CreateMatchScreen extends ConsumerStatefulWidget {
@@ -46,17 +46,6 @@ class _SetIdentityScreenState extends ConsumerState<CreateMatchScreen> {
       }
       return picked;
     }
-    // DateTime? pickedDate = await showDatePicker(
-    //   context: context,
-    //   initialDate: DateTime(1930),
-    //   firstDate: DateTime(1930),
-    //   lastDate: DateTime(2005),
-    // );
-    // if (pickedDate != null) {
-    //   return pickedDate;
-    // } else {
-    //   return 'n';
-    // }
   }
 
   @override

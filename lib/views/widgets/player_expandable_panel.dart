@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../match_model.dart';
-import '../../provider.dart';
+import '../../web3_provider.dart';
 import 'custom_text_field.dart';
 
 class PlayersExpandablePanel extends StatelessWidget {

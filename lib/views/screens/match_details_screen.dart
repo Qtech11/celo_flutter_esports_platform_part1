@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_celo_esports_platform/provider.dart';
 import 'package:flutter_celo_esports_platform/views/widgets/custom_drop_down.dart';
 import 'package:flutter_celo_esports_platform/views/widgets/custom_text_field.dart';
+import 'package:flutter_celo_esports_platform/web3_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
 
@@ -162,7 +162,6 @@ class MatchDetailsScreen extends ConsumerWidget {
     return showDialog(
       context: context,
       builder: (BuildContext context) {
-        TextEditingController controller = TextEditingController();
         return AlertDialog(
           title: const Text('Select an Option'),
           actions: <Widget>[
@@ -250,7 +249,7 @@ class MatchDetailsScreen extends ConsumerWidget {
             title: const Text('Update Status'),
             content: CustomDropDown(
               hintText: 'Select status',
-              textList: ['Scheduled', 'In Progress', 'Finished'],
+              textList: const ['Scheduled', 'In Progress', 'Finished'],
               text: selectedStatus,
               onChanged: (val) {
                 setState(() {
@@ -369,7 +368,6 @@ class MatchDetailsScreen extends ConsumerWidget {
     return showDialog(
       context: context,
       builder: (BuildContext context) {
-        TextEditingController controller = TextEditingController();
         return StatefulBuilder(
             builder: (BuildContext context, StateSetter setState) {
           return AlertDialog(
